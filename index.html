@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tool Inventory</title>
+<style>
+  :root {
+    --bg: #faf9f6;
+    --card: #ffffff;
+    --ink: #1c1b18;
+    --muted: #6b675e;
+    --line: #e6e2d8;
+    --accent: #1f5c45;
+    --badge-gh: #24292f;
+    --badge-vc: #000000;
+    --badge-nf: #05846b;
+    --tag-bg: #f0ede4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161512;
+      --card: #201f1b;
+      --ink: #ece9e1;
+      --muted: #a39e91;
+      --line: #35332c;
+      --accent: #6fbf9a;
+      --badge-gh: #d0d7de;
+      --badge-vc: #ededed;
+      --badge-nf: #32e6c1;
+      --tag-bg: #2a2924;
+    }
+    .badge { color: #161512; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 880px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+  header h1 {
+    font-size: 1.9rem;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.4rem;
+  }
+  header p { color: var(--muted); margin: 0; max-width: 60ch; }
+  .updated { font-size: 0.82rem; color: var(--muted); margin-top: 0.75rem; }
+  h2 {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.5rem;
+    margin: 2.75rem 0 1.1rem;
+  }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 0.9rem; }
+  .card {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1rem 1.1rem 1.05rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card h3 { margin: 0 0 0.3rem; font-size: 1.02rem; letter-spacing: -0.01em; }
+  .card h3 span.arrow { color: var(--accent); font-weight: 400; }
+  .card p { margin: 0 0 0.65rem; font-size: 0.88rem; color: var(--muted); }
+  .meta { display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; }
+  .badge {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 99px;
+    color: #fff;
+  }
+  .badge.gh { background: var(--badge-gh); }
+  .badge.vc { background: var(--badge-vc); }
+  .badge.nf { background: var(--badge-nf); }
+  .tag {
+    font-size: 0.68rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 99px;
+    background: var(--tag-bg);
+    color: var(--muted);
+  }
+  .notes { font-size: 0.85rem; color: var(--muted); }
+  .notes li { margin-bottom: 0.4rem; }
+  .notes code { font-size: 0.8rem; background: var(--tag-bg); padding: 0.05rem 0.35rem; border-radius: 4px; }
+  footer { margin-top: 3rem; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Tool Inventory</h1>
+    <p>Every deployed tool across GitHub Pages, Vercel and Netlify — one page, one link each. Grouped by audience.</p>
+    <p class="updated">Last audited 22 July 2026</p>
+  </header>
+
+  <h2>Public planning tools</h2>
+  <div class="grid">
+    <a class="card" href="https://chenjimeng01.github.io/us-uk-tools/">
+      <h3>US/UK Cross-Border Investor Tools <span class="arrow">→</span></h3>
+      <p>Hub for three free planning tools for Americans in the UK: the ISA decision calculator (UK tax saved vs US tax cost, with break-even balance), the FIG-window planner, and the PFIC exposure screener. Each tool shows its working and assumptions.</p>
+      <div class="meta"><span class="badge gh">GitHub Pages</span></div>
+    </a>
+    <a class="card" href="https://chenjimeng01.github.io/us-hmrc-reporting-funds/">
+      <h3>US-Domiciled HMRC Reporting Funds <span class="arrow">→</span></h3>
+      <p>Searchable list of every US-ISIN fund on HMRC's approved reporting funds list, with active/ceased status. Refreshes automatically when HMRC updates the list.</p>
+      <div class="meta"><span class="badge gh">GitHub Pages</span></div>
+    </a>
+    <a class="card" href="https://gilt-terminal.vercel.app">
+      <h3>Gilt Terminal <span class="arrow">→</span></h3>
+      <p>UK Treasury gilts ranked by after-tax yield to maturity, refreshed daily from the DMO. Includes the Ladder Builder for constructing maturity ladders.</p>
+      <div class="meta"><span class="badge vc">Vercel</span></div>
+    </a>
+    <a class="card" href="https://exit-planner-six.vercel.app">
+      <h3>UK Business Exit Planner <span class="arrow">→</span></h3>
+      <p>Side-by-side comparison of the three exits for a UK business owner: stay and extract profits, sell to an Employee Ownership Trust, or sell and leave — modelled after tax.</p>
+      <div class="meta"><span class="badge vc">Vercel</span></div>
+    </a>
+    <a class="card" href="https://uk-tax-harvest.vercel.app">
+      <h3>UK Tax-Loss Harvesting <span class="arrow">→</span></h3>
+      <p>Identifies tax-loss harvesting opportunities in a UK portfolio, working within the 30-day (bed-and-breakfast) rules.</p>
+      <div class="meta"><span class="badge vc">Vercel</span></div>
+    </a>
+    <a class="card" href="https://investmenttaxdrag.netlify.app">
+      <h3>Relocation Tax Drag Matrix <span class="arrow">→</span></h3>
+      <p>Compares investment tax drag across account wrappers (GIA, offshore bond and others) and residence scenarios.</p>
+      <div class="meta"><span class="badge nf">Netlify</span></div>
+    </a>
+    <a class="card" href="https://ukgilts.netlify.app">
+      <h3>Gilt Yield Analyser <span class="arrow">→</span></h3>
+      <p>Earlier gilt after-tax yield analyser. Superseded by Gilt Terminal but still live.</p>
+      <div class="meta"><span class="badge nf">Netlify</span><span class="tag">legacy</span></div>
+    </a>
+    <a class="card" href="https://rentorbuyproperty.netlify.app">
+      <h3>Rent vs Buy <span class="arrow">→</span></h3>
+      <p>Economic comparison of renting versus buying a property.</p>
+      <div class="meta"><span class="badge nf">Netlify</span></div>
+    </a>
+    <a class="card" href="https://ficstructure.netlify.app">
+      <h3>FIC Structure <span class="arrow">→</span></h3>
+      <p>Family Investment Company structuring tool.</p>
+      <div class="meta"><span class="badge nf">Netlify</span></div>
+    </a>
+    <a class="card" href="https://uk-relocation-readiness.netlify.app">
+      <h3>UK Relocation Readiness Test <span class="arrow">→</span></h3>
+      <p>Lead-generation quiz scoring how prepared someone is for a US-to-UK relocation.</p>
+      <div class="meta"><span class="badge nf">Netlify</span><span class="tag">awaiting compliance sign-off</span></div>
+    </a>
+  </div>
+
+  <h2>Adviser &amp; internal tools</h2>
+  <div class="grid">
+    <a class="card" href="https://us-uk-adviser-academy.netlify.app">
+      <h3>US/UK Adviser Academy <span class="arrow">→</span></h3>
+      <p>Training and certification site for advisers on US/UK cross-border planning. Four certifiable modules live, five pending sign-off.</p>
+      <div class="meta"><span class="badge nf">Netlify</span><span class="tag">Supabase auth</span></div>
+    </a>
+    <a class="card" href="https://pipeline-tracker-beta-cm.netlify.app">
+      <h3>Pipeline Tracker <span class="arrow">→</span></h3>
+      <p>Adviser pipeline tracker for managing prospects through the advice process.</p>
+      <div class="meta"><span class="badge nf">Netlify</span><span class="tag">beta</span></div>
+    </a>
+    <a class="card" href="https://hrpw-proposal-generator.vercel.app">
+      <h3>HRPW Proposal Generator <span class="arrow">→</span></h3>
+      <p>Generates client proposal documents for Hymans Robertson Personal Wealth advisers.</p>
+      <div class="meta"><span class="badge vc">Vercel</span></div>
+    </a>
+    <a class="card" href="https://hrpw-proposal-ai.vercel.app">
+      <h3>HRPW Proposal — Draft with AI <span class="arrow">→</span></h3>
+      <p>Demo of the proposal generator with AI-assisted drafting.</p>
+      <div class="meta"><span class="badge vc">Vercel</span><span class="tag">demo</span></div>
+    </a>
+    <a class="card" href="https://hrpwtour.netlify.app">
+      <h3>HRPW Discover Tour <span class="arrow">→</span></h3>
+      <p>Interactive walkthrough of the Hymans Robertson Personal Wealth proposition.</p>
+      <div class="meta"><span class="badge nf">Netlify</span></div>
+    </a>
+  </div>
+
+  <h2>Duplicates &amp; housekeeping</h2>
+  <ul class="notes">
+    <li>Three additional Netlify sites serve the same Relocation Tax Drag Matrix app as the canonical link above: <code>offshorebondtax</code>, <code>fancy-kataifi-7b2902</code> and <code>ephemeral-platypus-37574a</code>. Candidates for deletion.</li>
+    <li><code>offshore-bond-comparison</code> on GitHub Pages is broken — it serves raw JSX source instead of a built app. Its functionality lives on in the Tax Drag Matrix.</li>
+    <li><code>tax-matrix</code> and <code>offshorebondtax</code> exist as Vercel projects with no production deployment.</li>
+  </ul>
+
+  <footer>Static inventory — edit <code>index.html</code> in the <code>tool-inventory</code> repo and push to update.</footer>
+</main>
+</body>
+</html>
