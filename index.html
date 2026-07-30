@@ -92,9 +92,6 @@
     background: var(--tag-bg);
     color: var(--muted);
   }
-  .notes { font-size: 0.85rem; color: var(--muted); }
-  .notes li { margin-bottom: 0.4rem; }
-  .notes code { font-size: 0.8rem; background: var(--tag-bg); padding: 0.05rem 0.35rem; border-radius: 4px; }
   footer { margin-top: 3rem; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1rem; }
 </style>
 </head>
@@ -102,8 +99,8 @@
 <main>
   <header>
     <h1>Tool Inventory</h1>
-    <p>Every deployed tool across GitHub Pages, Vercel and Netlify — one page, one link each. Grouped by audience.</p>
-    <p class="updated">Last audited 30 July 2026</p>
+    <p>Every planning and adviser tool currently deployed — one page, one link each.</p>
+    <p class="updated">Last updated 30 July 2026</p>
   </header>
 
   <h2>Public planning tools</h2>
@@ -141,7 +138,7 @@
     <a class="card" href="https://chenjimeng01.github.io/tax-drag/">
       <h3>Relocation Tax Drag Matrix <span class="arrow">→</span></h3>
       <p>Compares investment tax drag across account wrappers (GIA, offshore bond and others) and residence scenarios, with 19 destination tax regimes profiled.</p>
-      <div class="meta"><span class="badge gh">GitHub Pages</span><span class="tag">v1.5.0 — newest build</span></div>
+      <div class="meta"><span class="badge gh">GitHub Pages</span></div>
     </a>
     <a class="card" href="https://rentorbuyproperty.netlify.app">
       <h3>Rent vs Buy <span class="arrow">→</span></h3>
@@ -165,7 +162,7 @@
     <a class="card" href="https://us-uk-adviser-academy.netlify.app">
       <h3>US/UK Adviser Academy <span class="arrow">→</span></h3>
       <p>Training and certification site for advisers on US/UK cross-border planning. Four certifiable modules live, five pending sign-off.</p>
-      <div class="meta"><span class="badge nf">Netlify</span><span class="tag">Supabase auth</span></div>
+      <div class="meta"><span class="badge nf">Netlify</span></div>
     </a>
     <a class="card" href="https://chenjimeng01.github.io/horizon/intake.html">
       <h3>Planning Intake <span class="arrow">→</span></h3>
@@ -194,25 +191,7 @@
     </a>
   </div>
 
-  <h2>Personal</h2>
-  <div class="grid">
-    <a class="card" href="https://chenjimeng01.github.io/pub-hunt-tracker/">
-      <h3>London Pub Property Tracker <span class="arrow">→</span></h3>
-      <p>Tracks pub premises for sale or to let in Marylebone, Fitzrovia, Notting Hill and Primrose Hill, refreshed twice weekly.</p>
-      <div class="meta"><span class="badge gh">GitHub Pages</span></div>
-    </a>
-  </div>
-
-  <h2>Duplicates &amp; housekeeping</h2>
-  <ul class="notes">
-    <li><strong>Cleared 30 Jul 2026:</strong> <code>ukgilts.netlify.app</code> (Gilt Yield Analyser, the Netlify predecessor of Gilt Terminal) deleted — Gilt Terminal on Vercel is the sole gilt tool. Also deleted: the three old-branded Netlify copies of the Tax Drag Matrix (<code>offshorebondtax</code>, <code>fancy-kataifi-7b2902</code>, <code>ephemeral-platypus-37574a</code>), the two empty Vercel projects (<code>tax-matrix</code>, <code>offshorebondtax</code>), and the broken <code>offshore-bond-comparison</code> GitHub Pages site. Netlify is down from 12 sites to 8, Vercel from 7 projects to 5.</li>
-    <li><strong>Tax Drag Matrix is deployed twice and the copies have diverged.</strong> GitHub Pages <code>tax-drag</code> is the newer build (v1.5.0, published 27 Jul); <code>investmenttaxdrag.netlify.app</code> was last built 22 Jul but is the target the source repo's CI still deploys to on every push to main. One of the two should become canonical.</li>
-    <li><strong>Horizon is deployed twice.</strong> GitHub Pages <code>horizon</code> tracks the source repo and is current (30 Jul); <code>horizon-cashflow.netlify.app</code> is a stale copy last published 23 Jul.</li>
-    <li><code>rentorbuyproperty</code>, <code>ficstructure</code> and <code>hrpwtour</code> on Netlify work but have no source repo — they were drag-and-drop deploys and cannot be rebuilt from version control. Back up before touching.</li>
-    <li>The <code>offshore-bond-comparison</code> GitHub repo still holds its source; only its broken Pages site was removed.</li>
-  </ul>
-
-  <footer>Static inventory — edit <code>index.html</code> in the <code>tool-inventory</code> repo and push to update.</footer>
+  <footer>All links verified live on 30 July 2026.</footer>
 </main>
 </body>
 </html>
