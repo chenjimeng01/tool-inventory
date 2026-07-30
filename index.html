@@ -103,7 +103,7 @@
   <header>
     <h1>Tool Inventory</h1>
     <p>Every deployed tool across GitHub Pages, Vercel and Netlify — one page, one link each. Grouped by audience.</p>
-    <p class="updated">Last audited 22 July 2026</p>
+    <p class="updated">Last audited 30 July 2026</p>
   </header>
 
   <h2>Public planning tools</h2>
@@ -116,6 +116,11 @@
     <a class="card" href="https://chenjimeng01.github.io/us-hmrc-reporting-funds/">
       <h3>US-Domiciled HMRC Reporting Funds <span class="arrow">→</span></h3>
       <p>Searchable list of every US-ISIN fund on HMRC's approved reporting funds list, with active/ceased status. Refreshes automatically when HMRC updates the list.</p>
+      <div class="meta"><span class="badge gh">GitHub Pages</span></div>
+    </a>
+    <a class="card" href="https://chenjimeng01.github.io/horizon/">
+      <h3>Horizon — Lifetime Cashflow Planner <span class="arrow">→</span></h3>
+      <p>Voyant-style lifetime cashflow and tax modelling: multi-scenario comparison, Monte Carlo, pension and IHT modelling, and move-abroad analysis with the residency and five-year rules. Produces client-ready reports.</p>
       <div class="meta"><span class="badge gh">GitHub Pages</span></div>
     </a>
     <a class="card" href="https://gilt-terminal.vercel.app">
@@ -133,15 +138,10 @@
       <p>Identifies tax-loss harvesting opportunities in a UK portfolio, working within the 30-day (bed-and-breakfast) rules.</p>
       <div class="meta"><span class="badge vc">Vercel</span></div>
     </a>
-    <a class="card" href="https://investmenttaxdrag.netlify.app">
+    <a class="card" href="https://chenjimeng01.github.io/tax-drag/">
       <h3>Relocation Tax Drag Matrix <span class="arrow">→</span></h3>
-      <p>Compares investment tax drag across account wrappers (GIA, offshore bond and others) and residence scenarios.</p>
-      <div class="meta"><span class="badge nf">Netlify</span></div>
-    </a>
-    <a class="card" href="https://ukgilts.netlify.app">
-      <h3>Gilt Yield Analyser <span class="arrow">→</span></h3>
-      <p>Earlier gilt after-tax yield analyser. Superseded by Gilt Terminal but still live.</p>
-      <div class="meta"><span class="badge nf">Netlify</span><span class="tag">legacy</span></div>
+      <p>Compares investment tax drag across account wrappers (GIA, offshore bond and others) and residence scenarios, with 19 destination tax regimes profiled.</p>
+      <div class="meta"><span class="badge gh">GitHub Pages</span><span class="tag">v1.5.0 — newest build</span></div>
     </a>
     <a class="card" href="https://rentorbuyproperty.netlify.app">
       <h3>Rent vs Buy <span class="arrow">→</span></h3>
@@ -167,6 +167,11 @@
       <p>Training and certification site for advisers on US/UK cross-border planning. Four certifiable modules live, five pending sign-off.</p>
       <div class="meta"><span class="badge nf">Netlify</span><span class="tag">Supabase auth</span></div>
     </a>
+    <a class="card" href="https://chenjimeng01.github.io/horizon/intake.html">
+      <h3>Planning Intake <span class="arrow">→</span></h3>
+      <p>Client fact-find form that feeds the Horizon cashflow planner.</p>
+      <div class="meta"><span class="badge gh">GitHub Pages</span></div>
+    </a>
     <a class="card" href="https://pipeline-tracker-beta-cm.netlify.app">
       <h3>Pipeline Tracker <span class="arrow">→</span></h3>
       <p>Adviser pipeline tracker for managing prospects through the advice process.</p>
@@ -189,11 +194,24 @@
     </a>
   </div>
 
+  <h2>Personal</h2>
+  <div class="grid">
+    <a class="card" href="https://chenjimeng01.github.io/pub-hunt-tracker/">
+      <h3>London Pub Property Tracker <span class="arrow">→</span></h3>
+      <p>Tracks pub premises for sale or to let in Marylebone, Fitzrovia, Notting Hill and Primrose Hill, refreshed twice weekly.</p>
+      <div class="meta"><span class="badge gh">GitHub Pages</span></div>
+    </a>
+  </div>
+
   <h2>Duplicates &amp; housekeeping</h2>
   <ul class="notes">
-    <li>Three additional Netlify sites serve the same Relocation Tax Drag Matrix app as the canonical link above: <code>offshorebondtax</code>, <code>fancy-kataifi-7b2902</code> and <code>ephemeral-platypus-37574a</code>. Candidates for deletion.</li>
-    <li><code>offshore-bond-comparison</code> on GitHub Pages is broken — it serves raw JSX source instead of a built app. Its functionality lives on in the Tax Drag Matrix.</li>
+    <li><strong>Resolved 30 Jul 2026:</strong> <code>ukgilts.netlify.app</code> (Gilt Yield Analyser, the Netlify predecessor of Gilt Terminal) has been deleted from Netlify. Gilt Terminal on Vercel is the sole gilt tool.</li>
+    <li><strong>Tax Drag Matrix is deployed twice and the copies have diverged.</strong> GitHub Pages <code>tax-drag</code> is the newer build (v1.5.0, published 27 Jul); <code>investmenttaxdrag.netlify.app</code> was last built 22 Jul but is the target the source repo's CI still deploys to on every push to main. One of the two should become canonical.</li>
+    <li><strong>Horizon is deployed twice.</strong> GitHub Pages <code>horizon</code> tracks the source repo and is current (30 Jul); <code>horizon-cashflow.netlify.app</code> is a stale copy last published 23 Jul.</li>
+    <li>Three further Netlify sites still serve old-branded (&ldquo;Hymans Robertson Personal Wealth&rdquo;) copies of the Tax Drag Matrix: <code>offshorebondtax</code>, <code>fancy-kataifi-7b2902</code> and <code>ephemeral-platypus-37574a</code>. Deletion candidates.</li>
+    <li><code>offshore-bond-comparison</code> on GitHub Pages is still broken — it serves raw JSX source instead of a built app. Its functionality lives on in the Tax Drag Matrix.</li>
     <li><code>tax-matrix</code> and <code>offshorebondtax</code> exist as Vercel projects with no production deployment.</li>
+    <li><code>rentorbuyproperty</code>, <code>ficstructure</code> and <code>hrpwtour</code> on Netlify work but have no source repo — they were drag-and-drop deploys and cannot be rebuilt from version control.</li>
   </ul>
 
   <footer>Static inventory — edit <code>index.html</code> in the <code>tool-inventory</code> repo and push to update.</footer>
