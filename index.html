@@ -205,13 +205,11 @@
 
   <h2>Duplicates &amp; housekeeping</h2>
   <ul class="notes">
-    <li><strong>Resolved 30 Jul 2026:</strong> <code>ukgilts.netlify.app</code> (Gilt Yield Analyser, the Netlify predecessor of Gilt Terminal) has been deleted from Netlify. Gilt Terminal on Vercel is the sole gilt tool.</li>
+    <li><strong>Cleared 30 Jul 2026:</strong> <code>ukgilts.netlify.app</code> (Gilt Yield Analyser, the Netlify predecessor of Gilt Terminal) deleted — Gilt Terminal on Vercel is the sole gilt tool. Also deleted: the three old-branded Netlify copies of the Tax Drag Matrix (<code>offshorebondtax</code>, <code>fancy-kataifi-7b2902</code>, <code>ephemeral-platypus-37574a</code>), the two empty Vercel projects (<code>tax-matrix</code>, <code>offshorebondtax</code>), and the broken <code>offshore-bond-comparison</code> GitHub Pages site. Netlify is down from 12 sites to 8, Vercel from 7 projects to 5.</li>
     <li><strong>Tax Drag Matrix is deployed twice and the copies have diverged.</strong> GitHub Pages <code>tax-drag</code> is the newer build (v1.5.0, published 27 Jul); <code>investmenttaxdrag.netlify.app</code> was last built 22 Jul but is the target the source repo's CI still deploys to on every push to main. One of the two should become canonical.</li>
     <li><strong>Horizon is deployed twice.</strong> GitHub Pages <code>horizon</code> tracks the source repo and is current (30 Jul); <code>horizon-cashflow.netlify.app</code> is a stale copy last published 23 Jul.</li>
-    <li>Three further Netlify sites still serve old-branded (&ldquo;Hymans Robertson Personal Wealth&rdquo;) copies of the Tax Drag Matrix: <code>offshorebondtax</code>, <code>fancy-kataifi-7b2902</code> and <code>ephemeral-platypus-37574a</code>. Deletion candidates.</li>
-    <li><code>offshore-bond-comparison</code> on GitHub Pages is still broken — it serves raw JSX source instead of a built app. Its functionality lives on in the Tax Drag Matrix.</li>
-    <li><code>tax-matrix</code> and <code>offshorebondtax</code> exist as Vercel projects with no production deployment.</li>
-    <li><code>rentorbuyproperty</code>, <code>ficstructure</code> and <code>hrpwtour</code> on Netlify work but have no source repo — they were drag-and-drop deploys and cannot be rebuilt from version control.</li>
+    <li><code>rentorbuyproperty</code>, <code>ficstructure</code> and <code>hrpwtour</code> on Netlify work but have no source repo — they were drag-and-drop deploys and cannot be rebuilt from version control. Back up before touching.</li>
+    <li>The <code>offshore-bond-comparison</code> GitHub repo still holds its source; only its broken Pages site was removed.</li>
   </ul>
 
   <footer>Static inventory — edit <code>index.html</code> in the <code>tool-inventory</code> repo and push to update.</footer>
